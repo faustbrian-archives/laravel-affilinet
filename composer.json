@@ -14,7 +14,7 @@
     }],
     "require": {
         "php": "^7.0",
-        "faustbrian/affilinet-php-client": "^1.0",
+        "faustbrian/affilinet-php-client": "dev-master",
         "graham-campbell/manager": "^2.5",
         "illuminate/support": "5.4.* || 5.5.*"
     },
