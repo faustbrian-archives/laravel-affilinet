@@ -1,0 +1,55 @@
+{
+    "name": "faustbrian/laravel-affilinet",
+    "description": "An Affilinet bridge for Laravel",
+    "keywords": ["laravel", "framework", "Laravel-Affilinet", "Laravel Affilinet", "Brian Faust", "faustbrian"],
+    "license": "MIT",
+    "authors": [{
+        "name": "Brian Faust",
+        "email": "hello@brianfaust.de",
+        "homepage": "https://brianfaust.de"
+    }],
+    "repositories": [{
+        "type": "composer",
+        "url": "https://satis.oliotech.solutions"
+    }],
+    "require": {
+        "php": "^7.0",
+        "faustbrian/affilinet-php-client": "^1.0",
+        "graham-campbell/manager": "^2.5",
+        "illuminate/support": "5.4.* || 5.5.*"
+    },
+    "require-dev": {
+        "graham-campbell/testbench": "^3.3",
+        "mockery/mockery": "^0.9.5",
+        "phpunit/phpunit": "^6.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "BrianFaust\\Affilinet\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BrianFaust\\Tests\\Affilinet\\": "tests"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "BrianFaust\\Affilinet\\AffilinetServiceProvider"
+            ],
+            "aliases": {
+                "Affilinet": "BrianFaust\\Affilinet\\Facades\\Affilinet"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
