@@ -41,6 +41,20 @@ class AffilinetServiceProvider extends ServiceProvider
     }
 
     /**
+     * Get the services provided by the provider.
+     *
+     * @return string[]
+     */
+    public function provides(): array
+    {
+        return [
+            'affilinet',
+            'affilinet.factory',
+            'affilinet.connection',
+        ];
+    }
+
+    /**
      * Register the factory class.
      */
     protected function registerFactory()
@@ -79,19 +93,5 @@ class AffilinetServiceProvider extends ServiceProvider
         });
 
         $this->app->alias('affilinet.connection', Affilinet::class);
-    }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return string[]
-     */
-    public function provides(): array
-    {
-        return [
-            'affilinet',
-            'affilinet.factory',
-            'affilinet.connection',
-        ];
     }
 }

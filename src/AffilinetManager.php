@@ -11,9 +11,9 @@
 
 namespace BrianFaust\Affilinet;
 
+use BrianFaust\AffilinetSdk\Client;
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
-use BrianFaust\AffilinetSdk\Client;
 
 class AffilinetManager extends AbstractManager
 {
@@ -28,13 +28,23 @@ class AffilinetManager extends AbstractManager
      * Create a new Affilinet manager instance.
      *
      * @param \Illuminate\Contracts\Config\Repository $config
-     * @param \BrianFaust\Affilinet\AffilinetFactory        $factory
+     * @param \BrianFaust\Affilinet\AffilinetFactory  $factory
      */
     public function __construct(Repository $config, AffilinetFactory $factory)
     {
         parent::__construct($config);
 
         $this->factory = $factory;
+    }
+
+    /**
+     * Get the factory instance.
+     *
+     * @return \BrianFaust\Affilinet\AffilinetFactory
+     */
+    public function getFactory(): AffilinetFactory
+    {
+        return $this->factory;
     }
 
     /**
@@ -57,15 +67,5 @@ class AffilinetManager extends AbstractManager
     protected function getConfigName(): string
     {
         return 'laravel-affilinet';
-    }
-
-    /**
-     * Get the factory instance.
-     *
-     * @return \BrianFaust\Affilinet\AffilinetFactory
-     */
-    public function getFactory(): AffilinetFactory
-    {
-        return $this->factory;
     }
 }

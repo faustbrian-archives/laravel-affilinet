@@ -11,8 +11,8 @@
 
 namespace BrianFaust\Affilinet;
 
-use InvalidArgumentException;
 use BrianFaust\AffilinetSdk\Client;
+use InvalidArgumentException;
 
 class AffilinetFactory
 {
