@@ -1,18 +1,25 @@
 {
     "name": "artisanry/affilinet",
     "description": "An Affilinet bridge for Laravel",
-    "keywords": ["laravel", "framework", "Laravel-Affilinet", "Laravel Affilinet"],
+    "keywords": [
+        "laravel",
+        "framework",
+        "Laravel-Affilinet",
+        "Laravel Affilinet"
+    ],
     "license": "MIT",
-    "authors": [{
-        "name": "Brian Faust",
-        "email": "hello@basecode.sh",
-        "homepage": "https://basecode.sh"
-    }],
+    "authors": [
+        {
+            "name": "Brian Faust",
+            "email": "hello@basecode.sh",
+            "homepage": "https://basecode.sh"
+        }
+    ],
     "require": {
-        "php": "^7.1",
+        "php": "^7.2",
         "faustbrian/affilinet-php": "dev-master",
         "graham-campbell/manager": "^3.0",
-        "illuminate/support": "^5.6"
+        "illuminate/support": "^5.8"
     },
     "require-dev": {
         "graham-campbell/testbench": "^5.0",
