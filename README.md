@@ -1,9 +1,9 @@
 # Laravel Affili.net
 
-[![Build Status](https://img.shields.io/travis/faustbrian/Laravel-Affilinet/master.svg?style=flat-square)](https://travis-ci.org/faustbrian/Laravel-Affilinet)
-[![PHP from Packagist](https://img.shields.io/packagist/php-v/faustbrian/laravel-affilinet.svg?style=flat-square)]()
-[![Latest Version](https://img.shields.io/github/release/faustbrian/Laravel-Affilinet.svg?style=flat-square)](https://github.com/faustbrian/Laravel-Affilinet/releases)
-[![License](https://img.shields.io/packagist/l/faustbrian/Laravel-Affilinet.svg?style=flat-square)](https://packagist.org/packages/faustbrian/Laravel-Affilinet)
+[![Build Status](https://img.shields.io/travis/artisanry/Affilinet/master.svg?style=flat-square)](https://travis-ci.org/artisanry/Affilinet)
+[![PHP from Packagist](https://img.shields.io/packagist/php-v/artisanry/affilinet.svg?style=flat-square)]()
+[![Latest Version](https://img.shields.io/github/release/artisanry/Affilinet.svg?style=flat-square)](https://github.com/artisanry/Affilinet/releases)
+[![License](https://img.shields.io/packagist/l/artisanry/Affilinet.svg?style=flat-square)](https://packagist.org/packages/artisanry/Affilinet)
 
 > A [Affilinet](https://affilinet.com) bridge for Laravel.
 
@@ -12,7 +12,7 @@
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
-$ composer require faustbrian/laravel-affilinet
+$ composer require artisanry/affilinet
 ```
 
 ## Configuration
@@ -20,7 +20,7 @@ $ composer require faustbrian/laravel-affilinet
 Laravel Affilinet requires connection configuration. To get started, you'll need to publish all vendor assets:
 
 ```bash
-$ php artisan vendor:publish --provider="BrianFaust\Affilinet\AffilinetServiceProvider"
+$ php artisan vendor:publish --provider="Artisanry\Affilinet\AffilinetServiceProvider"
 ```
 
 This will create a `config/affilinet.php` file in your app that you can modify to set your configuration. Also, make sure you check for changes to the original config file in this package between releases.
@@ -53,7 +53,7 @@ Here you can see an example of just how simple this package is to use. Out of th
 
 ```php
 // You can alias this in config/app.php.
-use BrianFaust\Affilinet\Facades\Affilinet;
+use Artisanry\Affilinet\Facades\Affilinet;
 
 Affilinet::service('Inbox')->searchVoucherCodes([]);
 // We're done here - how easy was that, it just works!
@@ -62,7 +62,7 @@ Affilinet::service('Inbox')->searchVoucherCodes([]);
 The Affilinet manager will behave like it is a `Affilinet\Affilinet`. If you want to call specific connections, you can do that with the connection method:
 
 ```php
-use BrianFaust\Affilinet\Facades\Affilinet;
+use Artisanry\Affilinet\Facades\Affilinet;
 
 // Writing this…
 Affilinet::connection('main')->service('Inbox')->searchVoucherCodes($params);
@@ -83,7 +83,7 @@ Affilinet::setDefaultConnection('alternative'); // The default is now alternativ
 If you prefer to use dependency injection over facades like me, then you can inject the manager:
 
 ```php
-use BrianFaust\Affilinet\AffilinetManager;
+use Artisanry\Affilinet\AffilinetManager;
 
 class Foo
 {
@@ -115,7 +115,7 @@ $ phpunit
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an e-mail to hello@brianfaust.me. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within this package, please send an e-mail to hello@basecode.sh. All security vulnerabilities will be promptly addressed.
 
 ## Credits
 
@@ -124,4 +124,4 @@ If you discover a security vulnerability within this package, please send an e-m
 
 ## License
 
-[MIT](LICENSE) © [Brian Faust](https://brianfaust.me)
+[MIT](LICENSE) © [Brian Faust](https://basecode.sh)

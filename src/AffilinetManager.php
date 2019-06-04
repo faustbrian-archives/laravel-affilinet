@@ -5,15 +5,15 @@ declare(strict_types=1);
 /*
  * This file is part of Laravel Affilinet.
  *
- * (c) Brian Faust <hello@brianfaust.me>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Affilinet;
+namespace Artisanry\Affilinet;
 
-use BrianFaust\AffilinetSdk\Client;
+use Artisanry\Affilinet\Client;
 use GrahamCampbell\Manager\AbstractManager;
 use Illuminate\Contracts\Config\Repository;
 
@@ -22,7 +22,7 @@ class AffilinetManager extends AbstractManager
     /**
      * The factory instance.
      *
-     * @var \BrianFaust\Affilinet\AffilinetFactory
+     * @var \Artisanry\Affilinet\AffilinetFactory
      */
     private $factory;
 
@@ -30,7 +30,7 @@ class AffilinetManager extends AbstractManager
      * Create a new Affilinet manager instance.
      *
      * @param \Illuminate\Contracts\Config\Repository $config
-     * @param \BrianFaust\Affilinet\AffilinetFactory  $factory
+     * @param \Artisanry\Affilinet\AffilinetFactory  $factory
      */
     public function __construct(Repository $config, AffilinetFactory $factory)
     {
@@ -42,7 +42,7 @@ class AffilinetManager extends AbstractManager
     /**
      * Get the factory instance.
      *
-     * @return \BrianFaust\Affilinet\AffilinetFactory
+     * @return \Artisanry\Affilinet\AffilinetFactory
      */
     public function getFactory(): AffilinetFactory
     {

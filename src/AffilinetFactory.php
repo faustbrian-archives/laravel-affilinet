@@ -5,15 +5,15 @@ declare(strict_types=1);
 /*
  * This file is part of Laravel Affilinet.
  *
- * (c) Brian Faust <hello@brianfaust.me>
+ * (c) Brian Faust <hello@basecode.sh>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace BrianFaust\Affilinet;
+namespace Artisanry\Affilinet;
 
-use BrianFaust\AffilinetSdk\Client;
+use Artisanry\Affilinet\Client;
 use InvalidArgumentException;
 
 class AffilinetFactory
@@ -23,7 +23,7 @@ class AffilinetFactory
      *
      * @param array $config
      *
-     * @return \BrianFaust\AffilinetSdk\Client
+     * @return \Artisanry\Affilinet\Client
      */
     public function make(array $config): Client
     {
@@ -59,7 +59,7 @@ class AffilinetFactory
      *
      * @param array $auth
      *
-     * @return \BrianFaust\AffilinetSdk\Client
+     * @return \Artisanry\Affilinet\Client
      */
     protected function getClient(array $auth): Client
     {
