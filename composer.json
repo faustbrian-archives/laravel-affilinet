@@ -8,18 +8,16 @@
         "Laravel Affilinet"
     ],
     "license": "MPL-2.0",
-    "authors": [
-        {
-            "name": "Brian Faust",
-            "email": "hello@basecode.sh",
-            "homepage": "https://basecode.sh"
-        }
-    ],
+    "authors": [{
+        "name": "Brian Faust",
+        "email": "hello@basecode.sh",
+        "homepage": "https://basecode.sh"
+    }],
     "require": {
         "php": "^7.2",
         "faustbrian/affilinet-php": "dev-master",
         "graham-campbell/manager": "^3.0",
-        "illuminate/support": "^5.8"
+        "illuminate/support": "^5.8|^6.0"
     },
     "require-dev": {
         "graham-campbell/testbench": "^5.0",
