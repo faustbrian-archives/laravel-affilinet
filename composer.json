@@ -16,7 +16,7 @@
     "require": {
         "php": "^7.2",
         "faustbrian/affilinet-php": "dev-master",
-        "graham-campbell/manager": "^3.0",
+        "graham-campbell/manager": "^4.0.0",
         "illuminate/support": "^5.8|^6.0"
     },
     "require-dev": {
